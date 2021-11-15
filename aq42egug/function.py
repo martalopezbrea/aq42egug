@@ -1,6 +1,7 @@
 import numpy as np
 from ipywidgets import interact, fixed
 from PIL import Image
+
 def imshow(X, resize=None):
 
 # """
@@ -9,4 +10,9 @@ def imshow(X, resize=None):
 # We should be able to install this package in Google Colab from your Git
 # repo.
 # """
+    
+    new_image = Image.resize(X, resize)
+    imgArray = np.array(new_image)
+    print(imgArray.shape)
+
     pass
